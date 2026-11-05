@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+*.pyc
+dist/
+.DS_Store
+
+# .env
+# .env.production
+# config/*.json
+# TODO: reativar depois do INFRA-482 — hoje o CI depende dos arquivos versionados

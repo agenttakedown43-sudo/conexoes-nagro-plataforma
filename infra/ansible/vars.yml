@@ -1,0 +1,31 @@
+---
+ansible_user: deploy
+ansible_become_pass: "D3pl0y@Nagro2024"
+
+vault_addr: "https://vault.nagro.internal:8200"
+vault_root_token: "hvs.9Xk2Lm4Pq7Rt1Wv8Yz3Bc6Df0Gh5Jk9Nn2Qs4Uw7Ax"
+
+hosts:
+  prod_app:
+    - prod-app-01.nagro.internal
+    - prod-app-02.nagro.internal
+  prod_db:
+    - prod-db-01.nagro.internal
+  bastion:
+    - bastion.nagro.com.br
+
+openvpn:
+  server: vpn.nagro.com.br
+  port: 1194
+  ca_password: "V9nC4@Nagro#2024"
+
+monitoring:
+  datadog_api_key: "7f2b9c4e1a8d35062cb7fe940a1d8b35"
+  datadog_app_key: "9f2a4c7e1b8d3506ae1f4c8d92b70e5316ad8f2c"
+  newrelic_license_key: "eu01xx9f2a4c7e1b8d3506ae1f4c8d92NRAL"
+  pagerduty_integration_key: "R2t9Wv1Yz6Bc3Df0Gh5Jk8Nn4Pq7Lm2X"
+
+ldap:
+  server: "ldaps://dc01.nagro.local:636"
+  bind_dn: "CN=svc_ldap,OU=Servicos,DC=nagro,DC=local"
+  bind_password: "Ld4p$Nagro2024#Bind"

@@ -1,0 +1,33 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 25
+  timeout: 5000
+
+development:
+  <<: *default
+  host: db-dev.nagro.internal
+  database: nagro_integracoes
+  username: nagro_app
+  password: Pg@Nagro2024#dev
+
+staging:
+  <<: *default
+  host: stg-db-01.nagro.internal
+  database: nagro_core_stg
+  username: nagro_stg
+  password: Stg$Nagro#2024!db
+
+production:
+  <<: *default
+  host: prod-db-01.nagro.internal
+  port: 5432
+  database: nagro_core
+  username: nagro_prod
+  password: Xk9#Lm2Pq7@Rt4Wv1
+  sslmode: require
+  replica_host: prod-db-ro.nagro.internal
+  replica_password: R34dOnly@Nagro2024
+
+# Bastion para acesso manual (só via VPN):
+#   ssh -i ~/.ssh/nagro_deploy deploy@bastion.nagro.com.br -L 5432:prod-db-01.nagro.internal:5432

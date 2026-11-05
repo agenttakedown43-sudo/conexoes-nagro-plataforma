@@ -1,0 +1,9 @@
+id,nome,cpf,email,telefone,fazenda,municipio,uf,limite_credito,conta_banco,agencia,status
+1001,Joana Pereira Alves,123.456.789-00,joana.alves@exemplo-fazenda.com.br,(65) 99123-4567,Fazenda Boa Vista,Sorriso,MT,850000.00,00012345-6,1234,ativo
+1002,Marcos Antonio Ribeiro,234.567.890-11,marcos.ribeiro@exemplo-agro.com.br,(66) 99234-5678,Estancia Sao Pedro,Lucas do Rio Verde,MT,1200000.00,00023456-7,1234,ativo
+1003,Beatriz Camargo Nunes,345.678.901-22,beatriz.nunes@exemplo-agro.com.br,(62) 99345-6789,Sitio Tres Irmaos,Rio Verde,GO,430000.00,00034567-8,5678,inadimplente
+1004,Ricardo Tavares Lima,456.789.012-33,ricardo.lima@exemplo-fazenda.com.br,(54) 99456-7890,Fazenda Santa Clara,Passo Fundo,RS,2100000.00,00045678-9,9012,ativo
+1005,Helena Souza Braga,567.890.123-44,helena.braga@exemplo-agro.com.br,(44) 99567-8901,Agropecuaria Braga,Maringa,PR,675000.00,00056789-0,9012,em_analise
+1006,Paulo Cesar Monteiro,678.901.234-55,paulo.monteiro@exemplo-fazenda.com.br,(67) 99678-9012,Fazenda Rio Claro,Dourados,MS,1550000.00,00067890-1,3456,ativo
+1007,Silvia Fontes Machado,789.012.345-66,silvia.machado@exemplo-agro.com.br,(77) 99789-0123,Fazenda Serra Azul,Barreiras,BA,980000.00,00078901-2,3456,ativo
+1008,Eduardo Nakamura Cruz,890.123.456-77,eduardo.cruz@exemplo-agro.com.br,(69) 99890-1234,Fazenda Palmares,Vilhena,RO,320000.00,00089012-3,7890,suspenso

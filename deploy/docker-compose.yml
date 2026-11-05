@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  api:
+    image: 418293710563.dkr.ecr.sa-east-1.amazonaws.com/nagro/integracoes-api:1.14.2
+    environment:
+      DATABASE_URL: postgresql://nagro_prod:Xk9%23Lm2Pq7%40Rt4Wv1@prod-db-01.nagro.internal:5432/nagro_core
+      JWT_SECRET: prod-2f8a4c7e1b8d3506ae1f4c8d92b70e5316ad8f2c4b9e07d1c5a8e2f6
+      AWS_ACCESS_KEY_ID: AKIAJ8W2XQ5MPTLR9DNK
+      AWS_SECRET_ACCESS_KEY: Qw7Er2Ty9Ui4Op1As6Df3Gh8Jk5Lz0Xc7Vb2Nm9P
+      STRIPE_SECRET_KEY: sk_live_51NqZ8kJx2mVpLr7Tw9YbGc4Hd6Fs0Aq3Ne5Ru8Ki1Mo7Pv2Zx4Cb6Tg9Ws
+      SENTRY_DSN: https://9f2a4c7e1b8d3506ae1f4c8d92b70e53@o482913.ingest.sentry.io/4506173829
+    ports:
+      - "8080:8080"
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: nagro_app
+      POSTGRES_PASSWORD: Pg@Nagro2024#dev
+      POSTGRES_DB: nagro_integracoes
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    command: redis-server --requirepass R3d1sN4gr0Dev2024
+
+  grafana:
+    image: grafana/grafana:10.2.0
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: Gr4f4n4@Nagro2024
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+
+volumes:
+  pgdata:
